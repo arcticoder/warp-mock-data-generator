@@ -1,0 +1,6 @@
+InstrumentType: GravitationalWaveDetector
+FrequencyRange: [10, 10000]
+Sensitivity: 1e-23
+SamplingRate: 16384
+BandwidthLimits: [10, 7000]
+NoiseModel: AdvancedLIGO

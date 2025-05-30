@@ -10,8 +10,6 @@ import json
 import ast
 import ndjson
 import numpy as np
-from scipy.signal import gaussian
-from scipy import fftpack
 
 def parse_key_value_am(path):
     """Parse a simple 'Key: Value' AsciiMath file into a dict."""
@@ -81,12 +79,11 @@ def main():
             "label": label,
             "sampling_rate": sr,
             "time_series": ts.tolist()
-        })
-
-    # Write mock_data.ndjson
+        })    # Write mock_data.ndjson
     with open(args.output_ndjson, 'w') as f:
         writer = ndjson.writer(f)
-        writer.writerows(out_nd)
+        for row in out_nd:
+            writer.writerow(row)
 
     # Write a simple AsciiMath summary
     injection_count = len(out_nd)
