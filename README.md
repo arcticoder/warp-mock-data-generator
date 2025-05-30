@@ -58,11 +58,11 @@ pip install numpy scipy ndjson
 ## Usage
 
 ```bash
-python generate_mock_data.py \
-  --signatures signatures.ndjson \
-  --signature-meta signatures.am \
-  --instrument-spec instrument_spec.am \
-  --output-ndjson mock_data.ndjson \
+python generate_mock_data.py `
+  --signatures signatures.ndjson `
+  --signature-meta signatures.am `
+  --instrument-spec instrument_spec.am `
+  --output-ndjson mock_data.ndjson `
   --output-meta mock_data.am
 ```
 
